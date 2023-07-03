@@ -1,12 +1,13 @@
+import { Button } from "@mui/material";
 const DeaultButton = ({ title, color, ...props }) => {
   return (
-    <button
+    <Button
       {...props}
-      className="text-white py-1.5 rounded-lg text-[14px] font-[500] px-5"
+      className="!text-white !py-1.5 !rounded-lg !text-[14px] !px-5 !capitalize"
       style={{ backgroundColor: color }}
     >
       {title}
-    </button>
+    </Button>
   );
 };
 

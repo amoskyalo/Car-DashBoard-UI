@@ -1,6 +1,7 @@
 import service from "../../Assets/Icons/service.svg";
 import message from "../../Assets/Icons/message2.svg";
 import alert from "../../Assets/Icons/alert.svg";
+import FlexLayout from "../DisplayLayouts/FlexLayout";
 
 const Noties = () => {
   const dummyData = [
@@ -29,8 +30,8 @@ const Noties = () => {
       <h2 className="font-semibold text-lg">Noties</h2>
       <div className="space-y-4">
         {dummyData.map((d, i) => (
-          <div key={i} className="flex flex-row space-x-4 items-center w-full">
-            <div className="flex flex-row items-center shadow-2xl bg-white justify-center h-12 w-12 rounded-full">
+          <FlexLayout key={i}>
+            <FlexLayout className="!items-center !justify-center shadow-2xl bg-white h-12 w-12 rounded-full">
               <img
                 src={
                   d.type === "alert"
@@ -41,19 +42,21 @@ const Noties = () => {
                 }
                 alt=""
               />
-            </div>
+            </FlexLayout>
             <div className="flex-1">
               <h2 className="font-semibold text-[16px]">{d.day}</h2>
               <p className="text-[14px]">{d.description}</p>
               <p
                 className={`w-max py-1 rounded px-2 font-[500] cursor-pointer ${
-                  d.done ? `bg-primaryGreen text-white` : `bg-[#ECEEF0] text-primaryDark`
+                  d.done
+                    ? `bg-primaryGreen text-white`
+                    : `bg-[#ECEEF0] text-primaryDark`
                 } text-[12px]`}
               >
                 {d.done ? "COMPLETED" : "04:48-01/07/2023"}
               </p>
             </div>
-          </div>
+          </FlexLayout>
         ))}
       </div>
     </div>

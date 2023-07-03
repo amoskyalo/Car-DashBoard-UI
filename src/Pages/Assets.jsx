@@ -1,25 +1,29 @@
 import car from "../Assets/Cars/assetCar.svg";
+import GridLayout from "../Components/DisplayLayouts/GridLayout";
 import { LineChart } from "../Components/Charts/LineChart";
 import Noties from "../Components/Cards/Noties";
 import AvailableSensors from "../Components/Cards/AvailableSensors";
 import Reminders from "../Components/Cards/Reminders";
+import Container from "../Components/Container/Container";
+import Heading from "../Components/Heading/Heading";
+import FlexLayout from "../Components/DisplayLayouts/FlexLayout";
 
 const Assets = () => {
   const dummyData = [
     {
-      name: "Fule Usage",
+      name: "Fuel Usage",
       value: "2903.89 Ltr",
     },
     {
-      name: "Fule Usage",
+      name: "Fuel Usage",
       value: "1200.89 Km",
     },
     {
-      name: "Fule Usage",
+      name: "Fuel Usage",
       value: "$3,000,290.00",
     },
     {
-      name: "Fule Usage",
+      name: "Fuel Usage",
       value: "186 Km/hr",
     },
   ];
@@ -47,11 +51,11 @@ const Assets = () => {
   };
 
   return (
-    <div className="p-8 space-y-4 relative">
-      <h2 className="font-semibold text-2xl text-primaryDark">Assets</h2>
-      <div className="flex flex-row gap-8">
+    <Container>
+      <Heading title="Assets" />
+      <FlexLayout className="!items-start !space-x-8">
         <div className="w-[30%] sticky top-24 bg-primaryBlue text-white py-8 px-6 rounded-2xl h-[500px]">
-          <div className="flex flex-row flex-wrap gap-y-4">
+          <FlexLayout className="flex-wrap gap-y-4 !space-x-0">
             {dummyData.map((d, i) => (
               <div
                 key={i}
@@ -61,7 +65,7 @@ const Assets = () => {
                 <h1 className="text-xl">{d.value}</h1>
               </div>
             ))}
-          </div>
+          </FlexLayout>
           <div className="w-full">
             <img src={car} alt="" className="mx-auto h-[450px]" />
           </div>
@@ -69,26 +73,26 @@ const Assets = () => {
 
         <div className="flex-1 space-y-8 text-primaryGray">
           <div className="p-8 bg-white rounded-2xl h-80 space-y-3">
-            <div className="flex flex-row items-center justify-between">
+            <FlexLayout>
               <h2 className="font-semibold text-lg">Activity</h2>
               <p className="text-primaryGray border-b border-gray-300 text-[14px] px-2 font-[500] cursor-pointer">
                 View All
               </p>
-            </div>
+            </FlexLayout>
             <div className="h-full pb-8">
-            <LineChart data={data} />
+              <LineChart data={data} />
             </div>
           </div>
 
-          <div className="grid grid-cols-2 gap-8">
+          <GridLayout gap={32}>
             <Noties />
             <AvailableSensors />
-          </div>
+          </GridLayout>
 
           <Reminders />
         </div>
-      </div>
-    </div>
+      </FlexLayout>
+    </Container>
   );
 };
 
