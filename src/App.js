@@ -8,7 +8,7 @@ function App() {
       <SideNav />
       <div className="flex-1">
         <Nav />
-        <Dashboard />
+        <Assets />
       </div>
     </div>
   );

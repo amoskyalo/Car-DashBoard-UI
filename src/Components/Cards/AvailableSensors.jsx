@@ -23,10 +23,12 @@ const AvailableSensors = () => {
           "Engine Temeperatures (deg C)",
         ].map((el, i) => (
           <div
-            className={`flex flex-row items-center justify-between font-[500]`}
+            className={`flex flex-row items-center justify-between font-[500] ${
+              i === 0 ? `text-primaryRed` : ``
+            }`}
           >
             <div className="flex flex-row items-center">
-              <Checkbox  />
+              <Checkbox className={`${i === 0 ? `!text-primaryRed` : ``}`} />
               <h2 className="ont-semibold">
                 {i !== 4 ? "Asset-" : ""}
                 {el}
@@ -37,7 +39,7 @@ const AvailableSensors = () => {
         ))}
       </div>
 
-      <DeaultButton title="See All" color="#FF6370"/>
+      <DeaultButton title="See All" color="#FF6370" />
     </div>
   );
 };
