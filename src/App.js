@@ -9,7 +9,7 @@ function App() {
       <SideNav />
       <div className="flex-1">
         <Nav />
-        <Assets />
+        <Booking />
       </div>
     </div>
   );

@@ -84,7 +84,7 @@ const Assets = () => {
             </div>
           </div>
 
-          <GridLayout gap={32}>
+          <GridLayout>
             <Noties />
             <AvailableSensors />
           </GridLayout>

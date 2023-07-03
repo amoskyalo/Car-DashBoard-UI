@@ -38,7 +38,7 @@ const Dashboard = () => {
   return (
     <Container>
       <Heading title="Dashboard" />
-      <GridLayout gap={32}>
+      <GridLayout>
         {cardsData.map((c, i) => (
           <DashboardCads
             icon={c.icon}
@@ -52,7 +52,7 @@ const Dashboard = () => {
         ))}
       </GridLayout>
 
-      <GridLayout gap={32}>
+      <GridLayout>
         <div className="w-full bg-white p-8 rounded-2xl">
           <h2 className="text-lg text-primaryGray font-[500]">
             <span className="font-semibold text-primaryDark">Miles</span>{" "}
@@ -112,7 +112,7 @@ const Dashboard = () => {
         </div>
       </GridLayout>
 
-      <GridLayout gap={32}>
+      <GridLayout>
         {cars.map((car, i) => (
           <Recommended
             key={i}

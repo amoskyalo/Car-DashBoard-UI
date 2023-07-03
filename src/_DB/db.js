@@ -6,6 +6,12 @@ import tire from "../Assets/Icons/tire.svg";
 import car1 from "../Assets/Cars/car1.svg";
 import car2 from "../Assets/Cars/car2.svg";
 import car3 from "../Assets/Cars/car3.svg";
+import car4 from "../Assets/Cars/car4.svg";
+import car5 from "../Assets/Cars/car5.svg";
+import car6 from "../Assets/Cars/car6.svg";
+import car7 from "../Assets/Cars/car7.svg";
+import car8 from "../Assets/Cars/car8.svg";
+import car9 from "../Assets/Cars/car9.svg";
 
 export const cardsData = [
   {
@@ -42,7 +48,6 @@ export const cardsData = [
   },
 ];
 
-
 export const cars = [
   {
     name: "Toyota Corrolla",
@@ -58,5 +63,68 @@ export const cars = [
     name: "Porsche 911 Carrera",
     color: "#F4E3E5",
     image: car3,
+  },
+];
+
+export const bookingCars = [
+  {
+    name: "Porsche 911 Carrera",
+    carImage: car4,
+    liked: false,
+  },
+  {
+    name: "Porsche 911 Carrera",
+    carImage: car5,
+    liked: false,
+  },
+  {
+    name: "Porsche 911 Carrera",
+    carImage: car6,
+    liked: false,
+  },
+  {
+    name: "Porsche 911 Carrera",
+    carImage: car7,
+    liked: false,
+  },
+  {
+    name: "Porsche 911 Carrera",
+    carImage: car8,
+    liked: false,
+  },
+  {
+    name: "Porsche 911 Carrera",
+    carImage: car9,
+    liked: false,
+  },
+  {
+    name: "Porsche 911 Carrera",
+    carImage: car7,
+    liked: false,
+  },
+  {
+    name: "Porsche 911 Carrera",
+    carImage: car8,
+    liked: false,
+  },
+  {
+    name: "Porsche 911 Carrera",
+    carImage: car9,
+    liked: false,
+  },
+  {
+    name: "Porsche 911 Carrera",
+    carImage: car4,
+    liked: false,
+  },
+  {
+    name: "Porsche 911 Carrera",
+    carImage: car5,
+    liked: false,
+  },
+  {
+    name: "Porsche 911 Carrera",
+    carImage: car6,
+    liked: false,
   },
 ];
