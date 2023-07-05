@@ -25,6 +25,7 @@ const SellCars = () => {
     ],
   };
 
+
   return (
     <Container>
       <Heading title="Sell Cars" />

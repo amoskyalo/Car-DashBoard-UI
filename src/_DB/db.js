@@ -128,3 +128,43 @@ export const bookingCars = [
     liked: false,
   },
 ];
+
+//events
+export const events = [
+  {
+    name: "Moto Track Day",
+    time: 7,
+    notes: "Discuss about motorbikes",
+    duration: "1hr",
+  },
+  {
+    name: "Moto Track Day",
+    time: 23,
+    notes: "Discuss about motorbikes",
+    duration: "1hr 15mins",
+  },
+  {
+    name: "Drift Series Second Round",
+    time: 1,
+    notes: "All motors",
+    duration: "45mins",
+  },
+  {
+    name: "Drift Series Second Round",
+    time: 1,
+    notes: "All motors",
+    duration: "15mins",
+  },
+  {
+    name: "Drift Series Second Round",
+    time: 1,
+    notes: "All motors",
+    duration: "3hr 15mins",
+  },
+  {
+    name: "Private Event",
+    time: 4,
+    notes: "JMD",
+    duration: "2hrs",
+  },
+];
