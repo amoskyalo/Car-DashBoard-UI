@@ -13,6 +13,7 @@ const Dashboard = () => {
   const [active, setActive] = useState(0);
   const [activeOne, setActiveOne] = useState(0);
 
+  //data and config for line bar
   const data = {
     labels: ["1 pm", "2 am", "3 pm", "4 am", "5 pm", "6 pm", "7 pm"],
     datasets: [
@@ -33,6 +34,19 @@ const Dashboard = () => {
     gradient.addColorStop(0, "rgba(255,118,76, 0.2)");
     gradient.addColorStop(0.6, "#ffffff ");
     return gradient;
+  };
+
+  //data for bar graph
+  const barData = {
+    labels: ["1 PM", "2 PM", "3 PM", "4 PM", "5 PM", "6 PM", "7 PM"],
+    datasets: [
+      {
+        data: [9, 6, 12, 5, 9, 3, 7],
+        backgroundColor: "rgba(244, 245, 249, 1)",
+        barPercentage: 0.6,
+        hoverBackgroundColor: "rgba(40, 132, 266, 1)",
+      },
+    ],
   };
 
   return (
@@ -78,7 +92,7 @@ const Dashboard = () => {
             <h2 className="font-semibold">256 Miles</h2>
           </FlexLayout>
           <div className="h-56">
-            <BarGraph />
+            <BarGraph data={barData} ticks={false} gridY={false}/>
           </div>
         </div>
 
