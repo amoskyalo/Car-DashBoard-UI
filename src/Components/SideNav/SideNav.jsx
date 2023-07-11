@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import dash from "../../Assets/Icons/dash.svg";
 import user from "../../Assets/Icons/user.svg";
 import car from "../../Assets/Icons/car.svg";
@@ -17,34 +18,42 @@ const SideNav = () => {
     {
       name: "Dashboard",
       icon: dash,
+      path: "/",
     },
     {
       name: "Assets",
       icon: user,
+      path: "/assets",
     },
     {
       name: "Booking",
       icon: car,
+      path: "/booking",
     },
     {
       name: "Sell Cars",
       icon: bag,
+      path: "/sell",
     },
     {
       name: "Buy Cars",
       icon: cart,
+      path: "/buy",
     },
     {
       name: "Services",
       icon: services,
+      path: "/services",
     },
     {
       name: "Calender",
       icon: calendar,
+      path: "/calender",
     },
     {
       name: "Messages",
       icon: messages,
+      path: "/messages",
     },
   ];
 
@@ -56,8 +65,9 @@ const SideNav = () => {
 
       <div className="space-y-4 relative">
         {navLinks.map((navLink, index) => (
-          <div
-            className={`px-4 py-2 rounded duration-400 cursor-pointer relative text-[#5F6165] duration-500 ${
+          <Link
+            to={`${navLink.path}`}
+            className={`px-4 py-2 rounded duration-400 block cursor-pointer relative text-[#5F6165] duration-500 ${
               activeNavLink === index
                 ? `bg-[#F3F5F8]`
                 : `bg-transparent hover:bg-[#F3F5F8]`
@@ -74,7 +84,7 @@ const SideNav = () => {
                 {navLink.name}
               </h2>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
 

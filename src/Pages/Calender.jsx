@@ -11,6 +11,7 @@ import { handleClickOutside } from "../_Functions/Functions";
 import { HiCalendarDays } from "react-icons/hi2";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { events } from "../_DB/db";
+import { Avatar, AvatarGroup } from "@mui/material";
 
 const Calender = () => {
   const dayRef = useRef(null);
@@ -35,6 +36,12 @@ const Calender = () => {
     return hourlyEvent;
   };
 
+
+  const images = [
+    "https://amoskyalo.netlify.app/static/media/amos.e2e93ed7e619bfefafd4.png",
+    "https://avatars.githubusercontent.com/u/91586973?v=4",
+    "https://amoskyalo.netlify.app/static/media/tomiyoka.dcd36053827576ad7ac7.jpg"
+  ]
   return (
     <Container>
       <GridLayout colCount={3}>
@@ -85,23 +92,11 @@ const Calender = () => {
                     <h2>Drift Series Firs Round</h2>
                     <FlexLayout>
                       <p>JDM</p>
-                      <FlexLayout className="!space-x-0">
-                        <img
-                          className="h-6 w-6 rounded-full border"
-                          src="https://amoskyalo.netlify.app/static/media/amos.e2e93ed7e619bfefafd4.png"
-                          alt=""
-                        />
-                        <img
-                          className="h-6 w-6  rounded-full border"
-                          src="https://avatars.githubusercontent.com/u/91586973?v=4"
-                          alt=""
-                        />
-                        <img
-                          className="h-6 w-6  rounded-full border"
-                          src="https://amoskyalo.netlify.app/static/media/tomiyoka.dcd36053827576ad7ac7.jpg"
-                          alt=""
-                        />
-                      </FlexLayout>
+                      <AvatarGroup total={24}>
+                         {images.map((img, i) => (
+                           <Avatar alt="users"  src={img} key={i}/>
+                         ))}
+                      </AvatarGroup>
                     </FlexLayout>
                   </div>
                 )}

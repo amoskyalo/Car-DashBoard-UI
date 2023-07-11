@@ -5,13 +5,23 @@ import Assets from "./Pages/Assets";
 import Booking from "./Pages/Booking";
 import SellCars from "./Pages/SellCars";
 import Calender from "./Pages/Calender";
+import Services from "./Pages/Services";
+
+import { Routes, Route } from "react-router-dom";
 function App() {
   return (
     <div className="flex flex-row">
       <SideNav />
       <div className="flex-1">
         <Nav />
-        <Calender />
+        <Routes>
+          <Route path="/" element={<Dashboard />} />
+          <Route path="/assets" element={<Assets />} />
+          <Route path="/booking" element={<Booking />} />
+          <Route path="/sell" element={<SellCars />} />
+          <Route path="/calender" element={<Calender />} />
+          <Route path="/services" element={<Services />} />
+        </Routes>
       </div>
     </div>
   );
