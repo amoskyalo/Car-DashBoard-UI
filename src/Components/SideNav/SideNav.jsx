@@ -78,9 +78,9 @@ const SideNav = () => {
             {activeNavLink === index && (
               <p className="content before:top-[0.1rem] lg:before:top-[0.3rem]"></p>
             )}
-            <div className="flex flex-row items-center justify-center gap-3 lg:justify-start lg:px-4">
+            <div className="flex flex-row items-center justify-center gap-3 w-max lg:justify-start lg:px-4">
               <img src={navLink.icon} alt="" />
-              <h2 className="font-semibold text-[16px] md:hidden lg:block">
+              <h2 className="font-semibold text-[16px] flex-1 md:hidden lg:block">
                 {navLink.name}
               </h2>
             </div>

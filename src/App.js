@@ -6,8 +6,10 @@ import Booking from "./Pages/Booking";
 import SellCars from "./Pages/SellCars";
 import Calender from "./Pages/Calender";
 import Services from "./Pages/Services";
+import Settings from "./Pages/Settings";
 
 import { Routes, Route } from "react-router-dom";
+
 function App() {
   return (
     <div className="flex flex-row">
@@ -21,6 +23,7 @@ function App() {
           <Route path="/sell" element={<SellCars />} />
           <Route path="/calender" element={<Calender />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/settings" element={<Settings />} />
         </Routes>
       </div>
     </div>
